@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ThemoviedbService } from '../../../services/themoviedb.service';
+
 
 @Component({
   selector: 'app-page-search-movie',
@@ -9,7 +11,7 @@ export class PageSearchMovieComponent implements OnInit {
 
   movieName: string;
 
-  constructor() { 
+  constructor(private themoviedbService: ThemoviedbService) {
     this.movieName = "";
   }
 
@@ -18,6 +20,7 @@ export class PageSearchMovieComponent implements OnInit {
 
   onSubmit() {
     alert("Su pelicula se llama " + this.movieName); 
+    this.themoviedbService.getMovies(this.movieName);
   }
   
   
