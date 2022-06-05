@@ -42,56 +42,33 @@ def sort_list(lst):
     
     
 # Punto 3
-def convert_list_to_bts(lst):
-    intput_list = lst.copy()
-    bts_lst = []
-    
-    mid = len(lst) // 2
-    left = lst[:mid]
-    right = lst[mid:]
-    
-    bts_lst.append(convert_list_to_bts(left))
-    
-    
-    return bts_list
-
-
-
 def create_bts(lst):
-    cosa = []
+    tree = []
     if len(lst) == 0:
         return None
     else:
         if len(lst) == 1:
-            cosa.append(lst[0])
-            return lst[0]
+            return lst
         else:
             mid = len(lst) // 2
             left = lst[:mid]
             right = lst[mid+1:]
             
-            
-            print(left)
-            print(right)
-            
-            create_bts(left)
-            create_bts(right)
+            tree.append(lst[mid])
+            tree.append(create_bts(left))
+            tree.append(create_bts(right))
         
-    return cosa
-    
+    return tree
 
-    
-          
+
+      
 if __name__ == '__main__':
     
-    my_list = [ 4, 7, 1, 5, 3, 6, 2]
+    #my_list = [ 4, 7, 1, 5, 3, 6, 2]
+    my_list = [ 1,2,3,4,5,6,7]
     output = sort_list(my_list)
-            
-    #print(convert_list_to_bts(output))
     
-    print(create_bts(output))
-    #mid_node_index = len(my_list) // 2
-    #binnary_tree = bts(my_list, 3)
-    #print("Binary Tree:", binnary_tree)
+    bts_list = create_bts(output)
+    print(bts_list)
     
     
