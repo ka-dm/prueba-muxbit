@@ -36,7 +36,7 @@ def sort_list(lst):
     lst_aux = lst.copy()
     merge_sort(lst_aux)
     print("Input: ", lst)
-    print("Output: ", lst_aux)
+    print("Output: ", lst_aux, end="\n\n")
     return lst_aux
     
     
@@ -61,14 +61,35 @@ def create_bts(lst):
     return tree
 
 
+# Punto 4 
+def search_bts(tree, key, depth=0):
+    if tree == None:
+        print("Tree is empty: ", key)
+        return False
+    else:
+        if tree[0] == key:
+            print("Key found: ", key, " at depth: ", depth)
+            return True
+        else:
+            if len(tree) == 1:
+                print("Key not found: ", key)
+                return False
+            else:
+                if key < tree[0]:
+                    return search_bts(tree[1], key, depth+1)
+                else:
+                    return search_bts(tree[2], key, depth+1)
+
       
 if __name__ == '__main__':
     
-    #my_list = [ 4, 7, 1, 5, 3, 6, 2]
-    my_list = [ 1,2,3,4,5,6,7]
+    my_list = [ 4, 7, 1, 5, 3, 6, 2, 8]
+    #my_list = [ 1,2,3,4,5,6,7]
     output = sort_list(my_list)
     
     bts_list = create_bts(output)
-    print(bts_list)
+    print("Binary tree = ",bts_list, end="\n\n")    
+    
+    search_bts(bts_list, 3)
     
     
