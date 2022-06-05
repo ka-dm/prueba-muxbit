@@ -1,4 +1,7 @@
 
+# Punto 2
+from numpy import rint
+
 
 def merge_sort(lst):
     if len(lst) > 1:
@@ -30,14 +33,65 @@ def merge_sort(lst):
             k += 1
 
 def sort_list(lst):
-    print("Input:", lst, end="\n")
-    merge_sort(lst)
-    print("Output:", lst, end="\n\n")
+    lst_aux = lst.copy()
+    merge_sort(lst_aux)
+    print("Input: ", lst)
+    print("Output: ", lst_aux)
+    return lst_aux
+    
+    
+    
+# Punto 3
+def convert_list_to_bts(lst):
+    intput_list = lst.copy()
+    bts_lst = []
+    
+    mid = len(lst) // 2
+    left = lst[:mid]
+    right = lst[mid:]
+    
+    bts_lst.append(convert_list_to_bts(left))
+    
+    
+    return bts_list
+
+
+
+def create_bts(lst):
+    cosa = []
+    if len(lst) == 0:
+        return None
+    else:
+        if len(lst) == 1:
+            cosa.append(lst[0])
+            return lst[0]
+        else:
+            mid = len(lst) // 2
+            left = lst[:mid]
+            right = lst[mid+1:]
             
+            
+            print(left)
+            print(right)
+            
+            create_bts(left)
+            create_bts(right)
+        
+    return cosa
+    
+
+    
+          
 if __name__ == '__main__':
     
-    my_list = [ 9, 5, 1, 5, 5]
-    sort_list(my_list)
+    my_list = [ 4, 7, 1, 5, 3, 6, 2]
+    output = sort_list(my_list)
             
+    #print(convert_list_to_bts(output))
+    
+    print(create_bts(output))
+    #mid_node_index = len(my_list) // 2
+    #binnary_tree = bts(my_list, 3)
+    #print("Binary Tree:", binnary_tree)
     
     
