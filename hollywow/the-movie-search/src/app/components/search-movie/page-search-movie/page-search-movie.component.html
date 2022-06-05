@@ -5,11 +5,26 @@
     <form (ngSubmit)="onSubmit()">
         <div class="form-group">
             <label for="movie-name">Nombre de la pelicula</label>
-            <input type="text" class="form-control" id="movie-name" name="movie-name" [(ngModel)]="movieName" placeholder="Ingrese el nombre de la pelicula">
+            <input type="text" class="form-control" id="movie-name" name="movie-name" [(ngModel)]="movieName"
+                placeholder="Ingrese el nombre de la pelicula">
         </div>
         <button type="submit" class="btn btn-primary">Buscar</button>
     </form>
 </div>
-<div>
-    <app-movie-card></app-movie-card>
+<div *ngFor='let item of moviesList'>
+    <!--ul>
+        <li *ngFor='let item of moviesList | keyvalue'>
+            Key: <b>{{item.key}}</b> and Value:
+            <b>{{item.value}}</b>
+        </li>
+    </ul>
+    <ul>
+        <li *ngFor='let item of moviesList'>
+            Img: <b>{{item.poster_path}}</b>
+            Titulo: <b>{{item.original_title}}</b>
+            Relese: <b>{{item.title}}</b>
+        </li>
+    </ul-->
+
+    <app-movie-card imgUrl={{item.poster_path}} title={{item.original_title}} releaseDate={{item.release_date}}></app-movie-card>
 </div>

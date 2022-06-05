@@ -15,10 +15,7 @@ export class ThemoviedbService {
    }
 
   getMovies(search: string) {
-    this.http.get<any>(`https://api.themoviedb.org/3/search/movie?api_key=${this.API_KEY}&language=en-US&query=${search}&page=1&include_adult=false`)
-      .subscribe(data => {
-        console.log(data);
-      });
+    return this.http.get<any>(`https://api.themoviedb.org/3/search/movie?api_key=${this.API_KEY}&language=en-US&query=${search}&page=1&include_adult=false`)
   }
 
 
