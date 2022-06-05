@@ -6,9 +6,17 @@ import { AppComponent } from './app.component';
 import { PageComponent } from './components/page/page.component';
 import { HeaderComponent } from './components/header/header.component';
 import { BodyComponent } from './components/body/body.component';
-import { SearchMovieComponent } from './components/search-movie/search-movie.component';
 import { MovieCardComponent } from './components/search-movie/movie-card/movie-card.component';
 import { PageSearchMovieComponent } from './components/search-movie/page-search-movie/page-search-movie.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,13 +24,20 @@ import { PageSearchMovieComponent } from './components/search-movie/page-search-
     PageComponent,
     HeaderComponent,
     BodyComponent,
-    SearchMovieComponent,
     MovieCardComponent,
     PageSearchMovieComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatToolbarModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

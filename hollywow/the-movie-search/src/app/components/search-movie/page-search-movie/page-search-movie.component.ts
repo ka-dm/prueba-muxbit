@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageSearchMovieComponent implements OnInit {
 
-  constructor() { }
+  movieName: string;
+
+  constructor() { 
+    this.movieName = "";
+  }
 
   ngOnInit(): void {
   }
 
+  onSubmit() {
+    alert("Su pelicula se llama " + this.movieName); 
+  }
+  
+  
 }

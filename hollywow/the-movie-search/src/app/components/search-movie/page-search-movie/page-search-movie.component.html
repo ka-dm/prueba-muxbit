@@ -1,1 +1,15 @@
-<p>page-search-movie works!</p>
+<div>
+    <h1>Busca tu pelicula aca!</h1>
+</div>
+<div>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="movie-name">Nombre de la pelicula</label>
+            <input type="text" class="form-control" id="movie-name" name="movie-name" [(ngModel)]="movieName" placeholder="Ingrese el nombre de la pelicula">
+        </div>
+        <button type="submit" class="btn btn-primary">Buscar</button>
+    </form>
+</div>
+<div>
+    <app-movie-card></app-movie-card>
+</div>
