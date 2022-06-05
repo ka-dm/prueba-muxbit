@@ -1,9 +1,10 @@
 .movie-poster-card {
     width: 150px;
     min-width: 150px;
+    margin: 4px;
 }
 
-.movie-poster-card mat-card-title{
+.movie-poster-card mat-card-title {
     font-size: 1.2em;
     font-weight: bold;
 }
@@ -12,3 +13,5 @@
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     background-size: cover;
 }
+
+
