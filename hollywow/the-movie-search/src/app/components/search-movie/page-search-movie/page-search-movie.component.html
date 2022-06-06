@@ -1,17 +1,20 @@
-<div>
-    <h1>Busca tu pelicula aca!</h1>
+<div class="div-search">
+    <div class="div-search-child">
+        <h2 id="title">Bienvenidos.</h2>
+        <h3 id="subtitle">Millones de películas, programas de televisión y personas por descubrir. Explora ahora.</h3>
+
+        <form (ngSubmit)="onSubmit()">
+            <mat-form-field appearance="fill">
+                <mat-label>Nombre de la pelicula</mat-label>
+                <input matInput type="text" id="movie-name" name="movie-name" [(ngModel)]="movieName"
+                    placeholder="Buscar película, serie de TV o persona...">
+            </mat-form-field>
+            <button mat-raised-button type="submit" color="primary">Buscar</button>
+        </form>
+    </div>
 </div>
-<div>
-    <form (ngSubmit)="onSubmit()">
-        <div class="form-group">
-            <label for="movie-name">Nombre de la pelicula</label>
-            <input type="text" class="form-control" id="movie-name" name="movie-name" [(ngModel)]="movieName"
-                placeholder="Ingrese el nombre de la pelicula">
-        </div>
-        <button type="submit" class="btn btn-primary">Buscar</button>
-    </form>
-</div>
-<div class="div-movies-card">
+
+<div class="div-movies-card mat-app-background">
     <div *ngFor='let item of moviesList'>
         <app-movie-card imgUrl={{item.poster_path}} title={{item.original_title}} releaseDate={{item.release_date}}>
         </app-movie-card>
