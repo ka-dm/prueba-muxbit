@@ -1,17 +1,42 @@
 .movie-poster-card {
-    width: 115px;
+    //position: relative;
+    width: 165px;
     min-width: 115px;
     margin: 5px;
+    min-height: 380px;
+    perspective: 200rem;
+}
+
+.movie-poster-card:hover .card-front {
+    transform: rotateY(180deg);
+}
+
+
+.movie-poster-card:hover .card-back{
+	transform: rotateY(0deg);
+}
+
+.card-back{
+	transform: rotateY(180deg);
+}
+
+.card{
+	position: absolute;
+	height: auto;
+	width: auto;
+	transition: all 0.9s;
+	backface-visibility: hidden;
+}
+
+.card{
+    transition: 0.9s;
 }
 
 .movie-poster-card mat-card-title {
     font-size: 1.2em;
-    font-weight: bold;
 }
 
 .example-header-image {
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     background-size: cover;
 }
-
-

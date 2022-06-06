@@ -16,7 +16,8 @@
 
 <div class="div-movies-card mat-app-background">
     <div *ngFor='let item of moviesList'>
-        <app-movie-card imgUrl={{item.poster_path}} title={{item.original_title}} releaseDate={{item.release_date}}>
+        <app-movie-card imgUrl={{item.poster_path}} title={{item.original_title}} releaseDate={{item.release_date}}
+            overview={{item.overview}}>
         </app-movie-card>
     </div>
 </div>
