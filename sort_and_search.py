@@ -1,9 +1,6 @@
-
-# Punto 2
-from numpy import rint
-
-
+# Punto 2 : metodo que ordena una lista de manera recursiva
 def merge_sort(lst):
+    
     if len(lst) > 1:
         mid = len(lst) // 2
         left = lst[:mid]
@@ -41,7 +38,7 @@ def sort_list(lst):
     
     
     
-# Punto 3
+# Punto 3: metodo que crea el arbol binario de busqueda
 def create_bts(lst):
     tree = []
     if len(lst) == 0:
@@ -61,8 +58,10 @@ def create_bts(lst):
     return tree
 
 
-# Punto 4 
+# Punto 4: metodo que realiza la busqueda en el arbol binario de busqueda
 def search_bts(tree, key, depth=0):
+    
+    
     if tree == None:
         print("Tree is empty: ", key)
         return False
@@ -83,12 +82,11 @@ def search_bts(tree, key, depth=0):
       
 if __name__ == '__main__':
     
-    my_list = [ 4, 7, 1, 5, 3, 6, 2, 8]
-    #my_list = [ 1,2,3,4,5,6,7]
+    my_list = [ 4, 7, 1, 5, 3, 6, 2]
     output = sort_list(my_list)
     
     bts_list = create_bts(output)
-    print("Binary tree = ",bts_list, end="\n\n")    
+    print("Binary tree = ",bts_list, end="\n\n")   
     
     search_bts(bts_list, 3)
     
