@@ -1,5 +1,5 @@
 # Screenshot
-![screenshot-web](https://ibb.co/R2kk7xB)
+![screenshot-web](https://i.ibb.co/4WnnJ6Y/hollywood-web-1.png)
 
 # TheMovieSearch
 
