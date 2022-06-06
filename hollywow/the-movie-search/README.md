@@ -1,7 +1,7 @@
-# Screenshot
+# Screenshot :desktop_computer:
 ![screenshot-web](https://i.ibb.co/4WnnJ6Y/hollywood-web-1.png)
 
-# Demo
+# Demo :white_check_mark:
 To see the demo go to [Demo Hollywood Angular](https://kevindm181998.github.io/) 
 
 # TheMovieSearch
