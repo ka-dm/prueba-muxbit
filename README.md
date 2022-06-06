@@ -1,6 +1,6 @@
 # Prueba-06
 
-======================================
+=========================================================================================================================================================================
 
 1. Cree un repositorio en GitHub llamado Prueba-06, en él debe ser agregado un archivo llamado sort_and_search para los puntos 2 a 4, y una carpeta llamada hollywow con los archivos del punto 5. Recuerde documentar el código, agregar la información necesaria para su ejecución, y realizar los respectivos commits al repositorio mientras resuelve la prueba.
 
@@ -15,4 +15,4 @@
 
 5. Implemente una aplicación web sencilla que permita buscar películas utilizando la API de TheMovieDB: [themoviedb](https://developers.themoviedb.org/3/search/search-movies)  
 
-======================================
+=========================================================================================================================================================================
