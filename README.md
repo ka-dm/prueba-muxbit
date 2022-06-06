@@ -4,8 +4,8 @@
 
 2. Implemente un algoritmo que permita ordenar una lista de números enteros positivos de la manera más eficiente posible. La implementación debe funcionar para una lista (input) de cualquier tamaño.
 
-* Input = [ 9, 5, 1, 5, 5]
-* Output = [ 1, 5, 5, 5, 9]
+  * Input = [ 9, 5, 1, 5, 5]
+  * Output = [ 1, 5, 5, 5, 9]
 
 3. Implemente un método que reciba la lista ordenada del punto dos y la almacene en un árbol binario.
 
